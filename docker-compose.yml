@@ -5,3 +5,11 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
+  swisnap:
+    image: solarwinds/solarwinds-snap-agent-docker:latest
+    hostname: swisnap-agent
+    container_name: swisnap-agent
+    volumes:
+      - /path/to/my_custom_statsd.yaml:/opt/SolarWinds/Snap/etc/plugins.d/statsd.yaml
+    environment:
+      - SOLARWINDS_TOKEN=3Z2zR308V5fdD4RKk5FtcwwNICVCM5JmUAhZ2m2W0kdF6cGN9-x-t_A8EnHNyRp8XwGkbXA
