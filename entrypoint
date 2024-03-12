@@ -1,0 +1,3 @@
+#!/bin/bash
+
+./rhminer -v 2 -r 20 -s $POOL_ADDRESS -su $WALLET_USER -cpu
